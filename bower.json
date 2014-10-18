@@ -1,0 +1,7 @@
+{
+  "name": "Sohana",
+  "dependencies": {
+    "angular": "1.2.24",
+    "angular-sanitize": "1.2.24"
+  }
+}

@@ -1,0 +1,136 @@
+!!! 5
+%html{ng: {app: "Sohana"}}
+  %head
+    %title Anna Sohana - Yoga, Meditation and Massage in Bali
+    %meta{http: {equiv: 'Content-Type'}, content: 'text/html;charset=utf-8'}
+    %meta{name: 'description', content: 'Yoga, Meditation and Massage in Bali - it is possible to obtain a high-quality service in an atmosphere of Balinese beauty and comfort.'}
+    %meta{name: 'keywords', content: 'yoga, meditation, massage, bali, anna sohana'}
+    %link{rel: 'shortcut icon', href: 'public/images/icons/favicon.ico', type: 'image/x-icon'}
+    %link{rel: "stylesheet", type: "text/css", href: "public/stylesheets/application.css"}
+    %script{type: "text/javascript", src: "vendor/components/angular/angular.min.js"}
+    %script{type: "text/javascript", src: "vendor/components/angular-sanitize/angular-sanitize.min.js"}
+    %script{type: "text/javascript", src: "public/javascripts/application.js"}
+    /[if IE]
+      %link{rel: "stylesheet", type: "text/css", href: "public/stylesheets/ie.css"}
+    
+  %body{ng: {controller: "WelcomeCtrl"}}
+    #container
+      %header
+        %h1
+          %a{href: '/'} Anna Sohana - Yoga, Meditation and Massage in Bali
+        
+        %nav
+          %a{href: "{{'#' + nav.en[$index]}}", ng: {repeat: "item in nav[lang]", click: "setNav(nav.en[$index])", class: "isNav(nav.en[$index]) ? 'active' : ''"}} {{item}}
+      
+      %section<
+        .home{ng: {controller: "HomeCtrl", show: "isNav('Home')"}}>
+          %h2{ng: {bind: {html: "data[lang].title"}}}
+          
+          .subtitle{ng: {bind: {html: "data[lang].subTitle"}}}
+          
+          .text{ng: {bind: {html: "data[lang].text"}}}
+        
+        .about{ng: {controller: "AboutCtrl", show: "isNav('About')"}}>
+          %h2{ng: {bind: {html: "data[lang].title"}}}
+          
+          .subtitle{ng: {bind: {html: "data[lang].subTitle"}}}
+          
+          .text{ng: {bind: {html: "data[lang].text"}}}
+          
+          %ul.images<
+            %li{ng: {repeat: "image in data.images"}}>
+              %img{ng: {src: "{{image}}", click: "setLightboxImage(image)"}}
+        
+        .massage{ng: {controller: "MassageCtrl", show: "isNav('Massage')"}}>
+          %h2{ng: {bind: {html: "data[lang].title"}}}
+        
+          .subtitle{ng: {bind: {html: "data[lang].subTitle"}}}
+        
+          %ul.images.no-links<
+            %li{ng: {repeat: "image in data.images"}}>
+              %img{ng: {src: "{{image}}"}}
+          
+          .text{ng: {bind: {html: "data[lang].text"}}}
+        
+        .yoga{ng: {controller: "YogaCtrl", show: "isNav('Yoga')"}}>
+          %h2{ng: {bind: {html: "data[lang].title"}}}
+        
+          .subtitle{ng: {bind: {html: "data[lang].subTitle"}}}
+        
+          %ul.images.no-links<
+            %li{ng: {repeat: "image in data.images"}}>
+              %img{ng: {src: "{{image}}"}}
+          
+          .text{ng: {bind: {html: "data[lang].text"}}}
+        
+        .meditation{ng: {controller: "MeditationCtrl", show: "isNav('Meditation')"}}>
+          %h2{ng: {bind: {html: "data[lang].title"}}}
+        
+          .subtitle{ng: {bind: {html: "data[lang].subTitle"}}}
+        
+          %ul.images.no-links<
+            %li{ng: {repeat: "image in data.images"}}>
+              %img{ng: {src: "{{image}}"}}
+          
+          .text{ng: {bind: {html: "data[lang].text"}}}
+        
+        .gallery{ng: {controller: "GalleryCtrl", show: "isNav('Gallery')"}}>
+          %ul.images.gallery<
+            %li{ng: {repeat: "image in data.imagesThumbs"}}>
+              %img{ng: {src: "{{image}}", click: "setLightboxImage(data.images[$index])"}}
+        
+        .testimonials{ng: {controller: "TestimonialsCtrl", show: "isNav('Testimonials')"}}>
+          %h2{ng: {bind: {html: "data[lang].title"}}}
+          
+          %ul.list
+            %li{ng: {repeat: "testimonial in data[lang].testimonials"}}
+              %blockquote{ng: {bind: {html: "testimonial.text"}}}
+              %p{ng: {bind: {html: "testimonial.author"}}}
+        
+        .contact{ng: {controller: "ContactCtrl", show: "isNav('Contact')"}}>
+          %h2{ng: {bind: {html: "data[lang].title"}}}
+          
+          %form{ng: {submit: "sendEmail(contactForm)"}, method: 'post', enctype: "text/plain", name: "contactForm"}
+            %label{for: 'name'}
+              {{data[lang].form.name}}
+              %span *
+            
+            %input{type: 'text', id: 'name', ng: {required: "true", model: 'contactForm.name'}}
+            
+            %label{for: 'email'}
+              {{data[lang].form.email}}
+              %span *
+            
+            %input{type: 'email', id: 'email', ng: {required: "true", model: 'contactForm.email'}}
+            
+            %label{for: 'question'}
+              {{data[lang].form.question}}
+              %span *
+            
+            %textarea{id: 'question', ng: {required: "true", model: 'contactForm.question'}}
+            
+            %input{type: 'submit', value: "{{data[lang].form.send}}", ng: {disabled: "contactForm.$invalid"}}
+          
+        %footer
+          %div{ng: {repeat: "item in promo", class: "isNav(item.title.en) ? 'active' : ''"}}
+            %h2{ng: {bind: {html: "item.title[lang]"}}}
+            
+            %img{ng: {src: "{{item.img}}"}}
+            
+            .text{ng: {bind: {html: "item.description[lang]"}}}
+            
+            .text
+              %p
+                %a{href: "{{'#' + item.title.en}}", ng: {click: "setNav(item.title.en)"}} {{more[lang]}}
+      
+      %footer
+        %p{ng: {bind: {html: "copyright[lang]"}}}
+        
+        %p.right
+          %a{href: true, ng: {click: "setLang('en')"}} English
+          %a{href: true, ng: {click: "setLang('ru')"}} Русский
+    
+    #lightbox{ng: {show: "getLightboxImage()"}}
+      .overlay
+      .content{ng: {click: "setLightboxImage('')"}}
+        %img{ng: {src: "{{getLightboxImage()}}"}}
