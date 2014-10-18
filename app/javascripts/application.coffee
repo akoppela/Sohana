@@ -97,6 +97,7 @@ Sohana.controller 'WelcomeCtrl', ['$scope', '$location', '$window', ($scope, $lo
     $scope.navigation == item
   
   $scope.setLightboxImage = (image)->
+    $scope.lightboxImage = ''
     $scope.lightboxImage = image
   
   $scope.getLightboxImage = ->
