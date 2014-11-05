@@ -93,6 +93,7 @@
         return $scope.navigation === item;
       };
       $scope.setLightboxImage = function(image) {
+        $scope.lightboxImage = '';
         return $scope.lightboxImage = image;
       };
       $scope.getLightboxImage = function() {
