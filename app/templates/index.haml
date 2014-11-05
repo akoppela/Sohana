@@ -131,7 +131,7 @@
           %a{href: true, ng: {click: "setLang('en')"}} English
           %a{href: true, ng: {click: "setLang('ru')"}} Русский
     
-    #lightbox{ng: {if: "getLightboxImage()"}}
+    #lightbox.ng-hide{ng: {show: "getLightboxImage()"}}
       .overlay
       .content{ng: {click: "setLightboxImage('')"}}
         %img{ng: {src: "{{getLightboxImage()}}"}}
