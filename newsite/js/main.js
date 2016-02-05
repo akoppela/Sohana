@@ -169,3 +169,6 @@ jQuery(function($) {
 		$('.modal:visible').each(centerModal);
 	});
 });
+
+
+

@@ -1137,6 +1137,7 @@ img {
 }
 .img-circle {
   border-radius: 50%;
+  margin-bottom: 15px;
 }
 hr {
   margin-top: 20px;
@@ -1285,10 +1286,14 @@ p {
   margin: 0 0 10px;
 }
 .lead {
-  margin-bottom: 20px;
-  font-size: 16px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.4;
+  color: #31b9ff;
+  border-left: 1px solid #31b9ff;
+  padding-left: 10px;
 }
 @media (min-width: 768px) {
   .lead {
@@ -4301,7 +4306,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-bottom: 0;
   border-width: 1px 0 0;
 }
-.navbar-brand {
+
+.navbar  .container .navbar-brand {
   float: left;
   height: 100%;
   padding: 0px 0px;
@@ -4310,8 +4316,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   top: 10px;
 }
-
-
 
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -4324,7 +4328,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
-    margin-left: -15px;
+    margin-left: 0px;
   }
 }
 .navbar-toggle {
@@ -5256,7 +5260,7 @@ a.thumbnail.active {
 }
 .media-heading {
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 .media-list {
   padding-left: 0;

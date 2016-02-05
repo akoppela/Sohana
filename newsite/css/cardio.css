@@ -280,8 +280,10 @@ section {
 	background: #fff;
 }
 
+
+
 .section-padded {
-	padding: 140px 0 40px;
+	padding: 120px 0 40px;
 }
 
 .cut-top {
@@ -1112,6 +1114,58 @@ footer .social-footer li:hover a {
 	}
 	.pricings .pricing .box-second {
 		padding-top: 0;
+	}
+}
+
+.modal-dialog.modal-slacker {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	max-width: 100%;
+}
+
+.modal-slacker .modal-content {
+	margin-left: 5%;
+	margin-right: 5%;
+	border-radius: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	height: 100%;
+	overflow: auto;
+	background: #fff url(../img/bgyoga.jpg) no-repeat top left;
+	background-position: 20px 20px
+}
+
+.modal-slacker .modal-header .close {
+	color: #fff;
+	background-color: #31b9ff;
+	border-color: #31b9ff;
+	opacity: 1;
+	padding: 10px 20px 17px 20px;
+	font-size: 27px;
+	z-index: 9999;
+	position: relative;
+}
+
+.modal-slacker .modal-title {
+	font-size: 34px;
+	font-weight: bold;
+}
+
+@media (min-width: 992px) {
+	.modal-slacker .modal-header,
+	.modal-slacker .modal-body,
+	.modal-slacker .modal-footer {
+		width: 900px;
+	}
+}
+
+@media (min-width: 768px) {
+	.modal-slacker .modal-header,
+	.modal-slacker .modal-body,
+	.modal-slacker .modal-footer {
+		width: 600px;
+		margin: 15px auto;
 	}
 }
 
