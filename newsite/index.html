@@ -29,7 +29,9 @@
   </head>
   <body>
 	  
-	
+	<div class="preloader">
+		<img src="img/loader.gif" alt="Preloader image">
+	</div>
   	<div class="modal fade in slacker-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="false">
 	<div class="modal-dialog modal-slacker">
 		<div class="modal-content">
@@ -81,7 +83,7 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right main-nav">
-					<li><a href="#intro">About</a></li>
+					<li><a href="#" data-toggle="modal" data-target=".slacker-modal">About </a></li>
 					<li><a href="#services">Yoga</a></li>
 					<li><a href="#team">Massage</a></li>
 					<li><a href="#pricing">Pricing</a></li>
@@ -183,7 +185,7 @@
 		</div>
 	</section>
 	
-	<!--<section id="services" class="section section-padded">
+	<section id="services" class="section section-padded">
 		<div class="cut cut-top"></div>
 		<div class="container">
 			<div class="row text-center title">
@@ -222,7 +224,7 @@
 		</div>
 		<div class="cut cut-bottom"></div>
 	</section>
-	<section id="pricing" class="section">
+	<!--<section id="pricing" class="section">
 		<div class="container">
 			<div class="row title text-center">
 				<h2 class="margin-top white">Pricing</h2>
