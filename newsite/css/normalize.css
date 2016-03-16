@@ -282,7 +282,7 @@ dl,
 menu,
 ol,
 ul {
-    margin: 1em 0;
+    margin: 0;
 }
 
 dd {
@@ -296,7 +296,8 @@ dd {
 menu,
 ol,
 ul {
-    padding: 0 0 0 40px;
+    padding: 0px;
+    list-style: none;
 }
 
 /*
