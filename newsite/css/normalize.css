@@ -100,9 +100,6 @@ body {
  * Addresses outline displayed oddly in Chrome
  */
 
-a:focus {
-    outline: thin dotted;
-}
 
 /*
  * Improves readability when focused and also mouse hovered in all browsers

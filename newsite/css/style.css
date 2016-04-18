@@ -18,7 +18,6 @@
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	text-transform: uppercase;
 	color: #555;
 	background: #fff;
 }
@@ -50,7 +49,6 @@
 	margin: 0;
 	padding: 0 50px;
 	font-weight: 200;
-	font-size: 36px;
 	letter-spacing: 10px;
 	
 }
@@ -72,6 +70,7 @@
 	height: 100%;
 	border-left: 1px solid #f2f2f2;
 	border-top: 1px solid #f2f2f2;
+	padding-bottom: 40px;
 }
 
 .ps-content {
@@ -110,7 +109,7 @@
 
 .ps-content p {
 	line-height: 26px;
-	font-size: 12px;
+	font-size: 13px;
 	letter-spacing: 2px;
 	word-spacing: 10px;
 	padding: 10px 15px;
@@ -155,6 +154,7 @@
 	top: 0px;
 	height: 100%;
 	overflow: hidden;
+	border-left: 1px solid #f2f2f2;
 }
 
 .ps-slides {
@@ -166,7 +166,7 @@
 .ps-slides > div {
 	width: 100%;
 	height: 100%;
-	box-shadow: inset 0 0 0 9999px rgba(179,157,250,0.1);
+	
 }
 
 .ps-slidewrapper > nav {
@@ -235,7 +235,7 @@
 .ps-slides > div,
 .ps-slidewrapper > nav > a {
 	background-color: #fff;
-	background-position: center top;
+	background-position: right top;
 	background-repeat: no-repeat;
 	-webkit-background-size: auto 100%;
 	-moz-background-size: auto 100%;
@@ -250,15 +250,58 @@
 	transition: top 400ms ease-out;
 }
 
+.ps-header ul {
+	float: right;
+	line-height: 150px;
+}
+
+.ps-header ul li {
+	display: inline-block;
+	border-left:1px solid #f2f2f2;
+
+}
+
+.ps-header ul li a {
+	display: block;
+	
+}
+
+.ps-header ul li i {
+	font-size: 18px;
+	color: #ccc;
+}
+
+@media screen and (min-width: 860px) {
+	.ps-header ul li a {
+	padding: 0 30px;
+	
+}
+
+	.ps-header h1 {
+	font-size: 36px;
+	
+}
+}
+
 @media screen and (max-width: 860px) {
 
 	.js .ps-container > div {
 		width: 100%;
 	}
+	
+	.ps-header h1 {
+	font-size: 30px;
+	
+}
 
 	.js .ps-header {
 		height: 50px;
 	}
+	
+	.ps-header ul li a {
+		padding: 0 15px;
+	}
+	
 
 	.js .ps-header h1 {
 		line-height: 50px;
@@ -266,6 +309,10 @@
 		letter-spacing: 4px;
 		
 	}
+	
+	.ps-header ul {
+	line-height: 50px;
+}
 
 	.js .ps-slides {
 		bottom: 320px;
@@ -316,15 +363,6 @@
 	}
 }
 
-.contacts a {
-	float: right;
-	border-left: 1px solid #f2f2f2;
-	height: 150px;
-	display: block;
-	width: 150px;
-	text-align: center;
-	line-height: 150px;
-}
 
 
 
