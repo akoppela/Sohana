@@ -19,7 +19,7 @@
 	height: 100%;
 	overflow: hidden;
 	color: #555;
-	background: #fff;
+	background: #ffffff;
 }
 
 .ps-container > div {
@@ -362,6 +362,7 @@
 		margin: 10px 20px 0 0;
 	}
 }
+
 
 
 
