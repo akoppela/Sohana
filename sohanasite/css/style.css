@@ -321,8 +321,9 @@
 
 	.js .ps-contentwrapper {
 		top: auto;
-		height: 220px;
-		bottom: 100px;
+		height: 260px;
+		bottom: 60px;
+		
 	}
 
 	.js .ps-content {
