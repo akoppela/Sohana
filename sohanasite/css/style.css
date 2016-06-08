@@ -20,6 +20,26 @@
 	color: #555;
 	background: #ffffff;
 }
+
+.GalBtn {
+	border: 2px solid #f7cfc6;
+	color: #f7cfc6;
+	position: absolute;
+	bottom: 100px;
+	left: 50px;
+	padding: 10px 40px;
+	font-size: 1.5em;
+	font-weight: 600;
+}
+
+p a.More {
+	border: 2px solid #f7cfc6;
+	color: #f7cfc6;
+	padding: 10px 40px;
+	font-size: 1.5em;
+	font-weight: 600;
+}
+
 .ps-container > div {
 	position: absolute;
 	width: 50%;
@@ -151,6 +171,10 @@
 	border-left: 1px solid #f2f2f2;
 }
 
+.ps-slidewrapper.gallery {
+	overflow: scroll;
+}
+
 .ps-slides {
 	top: 0px;
 	bottom: 200px;
@@ -252,12 +276,39 @@
 
 .ps-header ul li {
 	display: inline-block;
-	border-left:1px solid #f2f2f2;
-
+	
 }
+
+.ps-header ul li a span {
+	font-size: 8px;
+	position: relative;
+	right: -5px;
+	top: -3px;
+}
+
+.dropdown {
+	background: #fff;
+	display: none;
+	width: 100%;
+	border-bottom: 1px solid #f2f2f2;
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+}
+
+.dropdown li  {
+	border: none;
+	padding: 0;
+}
+
+.dropdown li a {
+	width: 100%:
+}
+
 
 .ps-header ul li a {
 	display: block;
+	position: relative;
+	border-left:1px solid #f2f2f2;
+	cursor: pointer;
 	
 }
 
@@ -318,6 +369,10 @@
 		height: 260px;
 		bottom: 60px;
 		
+	}
+	
+	.js .ps-contentwrapper.gallery {
+		bottom: 0px;
 	}
 
 	.js .ps-content {

@@ -5,6 +5,12 @@ $(window).on('load', function () {
 	    	$spinner.fadeOut();
 	    	$preloader.delay(350).fadeOut('slow');
 	    });
+	    
+$(document).ready(function(){
+	$('.menu-lang').click(function(){
+		$('.dropdown').slideToggle('fast');
+	})
+});	    
 
 var Slider = (function() {
 	
